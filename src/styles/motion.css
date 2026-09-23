@@ -1,0 +1,84 @@
+/*
+ * Motion system for the redesigned sections (design-reference/home-page.design.html).
+ * Keyframes are prefixed `bx-`; the classes below are small reusable building blocks.
+ * Everything here is switched off for visitors who ask for reduced motion (bottom of file).
+ * Only transform, opacity and clip-path are animated, so it stays smooth.
+ */
+
+@keyframes bx-rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bx-mask { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes bx-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes bx-marquee-reverse { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes bx-drift { from { transform: translateX(0); } to { transform: translateX(-120px); } }
+@keyframes bx-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+@keyframes bx-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.7); } }
+@keyframes bx-sweep { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes bx-fill-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes bx-draw-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes bx-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes bx-scan { from { transform: translateY(-100%); } to { transform: translateY(250%); } }
+@keyframes bx-border-sweep { from { background-position: 0% 50%; } to { background-position: 200% 50%; } }
+
+/* Display headlines: never split a word; size from the container, not the viewport. */
+/* Visible to screen readers only. */
+.bx-sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.bx-display { overflow-wrap: normal; word-break: keep-all; hyphens: none; white-space: normal; }
+.bx-display-container { container-type: inline-size; } /* Every element that uses cqi units needs one of these as its nearest wrapper; without it cqi falls back to the viewport. */
+
+/* Light sweep across a button. The element must clip its overflow. */
+.bx-shine { position: relative; overflow: hidden; isolation: isolate; }
+.bx-shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent, rgba(255, 248, 240, 0.18), transparent);
+  transform: translateX(-100%);
+  animation: bx-sweep 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Endless ticker: put the items in twice inside .bx-marquee-track so the loop is seamless. */
+.bx-marquee { overflow: hidden; }
+.bx-marquee-track { display: flex; width: max-content; animation: bx-marquee var(--bx-marquee-duration, 30s) linear infinite; }
+.bx-marquee-track--reverse { animation-name: bx-marquee-reverse; }
+.bx-marquee:hover .bx-marquee-track { animation-play-state: paused; }
+
+/* Small looping effects. */
+.bx-float { animation: bx-float 6s ease-in-out infinite; }
+.bx-spin { animation: bx-spin var(--bx-spin-duration, 40s) linear infinite; }
+.bx-spin--reverse { animation-direction: reverse; }
+.bx-pulse-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: bx-pulse 1.6s ease-in-out infinite; }
+.bx-drift { animation: bx-drift 14s ease-in-out infinite alternate; }
+
+/* Outlined display text, e.g. the second hero line and background watermarks. */
+.bx-outline-text { color: transparent; -webkit-text-stroke: var(--bx-outline-width, 2px) var(--bx-outline-color, var(--text)); }
+
+/* One-off entrance animations. Use --bx-delay to stagger them (e.g. style={{ '--bx-delay': '200ms' }}). */
+.bx-mask-in { animation: bx-mask 900ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--bx-delay, 0ms) both; }
+.bx-rise-in { animation: bx-rise 800ms ease-out var(--bx-delay, 0ms) both; }
+
+/* Moving gradient frame: wrap content in .bx-gradient-border > .bx-gradient-border__inner. */
+.bx-gradient-border {
+  padding: 2px;
+  background: linear-gradient(90deg, var(--maroon), var(--maroon-bright), var(--maroon), var(--maroon-dark), var(--maroon));
+  background-size: 200% 100%;
+  animation: bx-border-sweep 6s linear infinite;
+}
+.bx-gradient-border__inner { height: 100%; background: var(--surface); }
+
+@media (prefers-reduced-motion: reduce) {
+  .bx-shine::after,
+  .bx-marquee-track,
+  .bx-float,
+  .bx-spin,
+  .bx-pulse-dot,
+  .bx-drift,
+  .bx-mask-in,
+  .bx-rise-in,
+  .bx-gradient-border { animation: none !important; }
+  .bx-shine::after { display: none; }
+  .bx-mask-in { clip-path: none; }
+  .bx-rise-in { opacity: 1; transform: none; }
+}

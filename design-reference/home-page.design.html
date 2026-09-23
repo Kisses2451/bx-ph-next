@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home page (assembled)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#080707;font-family:'Chakra Petch',sans-serif;color:#f5f5f5}
+a{color:#c9a227}a:hover{color:#e0bd4a}
+@keyframes bx-rise{0%{opacity:0;transform:translateY(28px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes bx-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes bx-marquee-rev{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+@keyframes bx-drift{0%{transform:translateX(0)}100%{transform:translateX(-120px)}}
+@keyframes bx-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes bx-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+@keyframes bx-sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@keyframes bx-fill{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+@keyframes bx-draw{0%{transform:scaleY(0)}100%{transform:scaleY(1)}}
+@keyframes bx-spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+@keyframes bx-scan{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
+@keyframes bx-mask{0%{clip-path:inset(0 100% 0 0)}100%{clip-path:inset(0 0 0 0)}}
+@keyframes bx-border{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes bx-blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes bx-border-sweep{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 3964px; display: flex; flex-direction: column; background: #080707;">
+<header style="position: sticky; top: 0; z-index: 10; width: 1440px; height: 80px; box-sizing: border-box; padding: 0 80px; display: flex; align-items: center; gap: 24px; background: rgba(8,7,7,0.92); border-bottom: 1px solid rgba(245,235,232,0.16);">
+<a href="#" style="display: flex; align-items: center; gap: 12px; color: #f5f5f5; text-decoration: none;"><img src="/bx-logo.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"><span style="font-size: 20px; font-weight: 700; letter-spacing: 0.04em;">BLOODLUST PHILIPPINES</span></a>
+<label style="flex-grow: 1; max-width: 320px; height: 44px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(245,235,232,0.24); background: #100e0e; color: #b6acad;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><input type="search" placeholder="Search website" aria-label="Search website" style="flex-grow: 1; background: transparent; border: 0; color: #f5f5f5; font-family: inherit; font-size: 15px; outline: none;"></label>
+<nav aria-label="Primary" style="margin-left: auto; display: flex; gap: 4px;">
+<a href="#" aria-current="page" style="height: 44px; padding: 0 16px; display: flex; align-items: center; background: #211a1b; color: #f5f5f5; text-decoration: none; font-weight: 600;">Home</a>
+<a href="#" style="height: 44px; padding: 0 16px; display: flex; align-items: center; color: #f5f5f5; text-decoration: none; font-weight: 600;">Partners</a>
+<a href="#" style="height: 44px; padding: 0 16px; display: flex; align-items: center; color: #f5f5f5; text-decoration: none; font-weight: 600;">About Us</a>
+</nav>
+<a href="#" style="height: 44px; padding: 0 22px; display: flex; align-items: center; gap: 8px; background: #7a1420; color: #fff8f0; text-decoration: none; font-weight: 700; letter-spacing: 0.1em; border: 1px solid rgba(201,162,39,0.72);">JOIN NOW <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<button type="button" aria-label="Toggle dark mode" style="width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; color: #f5f5f5; cursor: pointer;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
+</header>
+<section style="position: relative; width: 1440px; height: 900px; box-sizing: border-box; background: #080707; overflow: hidden; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; padding: 96px 80px 80px;">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(245,235,232,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(245,235,232,0.16) 1px, transparent 1px); background-size: 120px 120px; opacity: .35;"></div>
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 40%; background: linear-gradient(transparent, rgba(201,162,39,0.06), transparent); animation: bx-scan 6s linear infinite;"></div>
+<div style="grid-column: span 7; position: relative; display: flex; flex-direction: column; justify-content: space-between;">
+<div style="display: flex; flex-direction: column; gap: 28px;">
+<div style="font-size: 13px; letter-spacing: 0.3em; color: #c9a227; font-weight: 600;">PERFORMANCE RECRUITMENT SYSTEM / EST. [YEAR]</div>
+<h1 style="margin: 0; font-size: 132px; line-height: 0.86; font-weight: 700; letter-spacing: -0.01em;"><span style="display: block; animation: bx-mask 900ms cubic-bezier(.2,.7,.2,1) both;">BLOODLUST</span><span style="display: block; color: transparent; -webkit-text-stroke: 2px #f5f5f5; animation: bx-mask 900ms 200ms cubic-bezier(.2,.7,.2,1) both;">PHILIPPINES</span><span style="display: block; color: #c9a227; font-size: 64px; margin-top: 12px; animation: bx-mask 900ms 400ms cubic-bezier(.2,.7,.2,1) both;">CORP.</span></h1>
+<p style="margin: 0; max-width: 560px; font-size: 20px; line-height: 1.55; color: #b6acad; animation: bx-rise 800ms 600ms ease-out both;">Discover, review, and onboard standout talent through a streamlined player application portal.</p>
+</div>
+<div style="display: flex; gap: 12px; animation: bx-rise 800ms 800ms ease-out both;"><a href="#" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 28px; background: #7a1420; color: #fff8f0; text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: 0.12em; border: 1px solid rgba(201,162,39,0.72);"><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,248,240,0.16), transparent); animation: bx-sweep 3s ease-in-out infinite;"></span>APPLY NOW <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="#" style="display: inline-flex; align-items: center; height: 56px; padding: 0 28px; color: #f5f5f5; text-decoration: none; font-weight: 600; font-size: 15px; letter-spacing: 0.12em; border: 1px solid rgba(245,235,232,0.24);">ADMIN ACCESS</a></div>
+</div>
+<div style="grid-column: span 5; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px;">
+<div style="position: relative; width: 440px; height: 440px; display: grid; place-items: center;">
+<div aria-hidden="true" style="position: absolute; inset: 0; border: 1px dashed rgba(201,162,39,0.5); border-radius: 50%; animation: bx-spin 40s linear infinite;"></div>
+<div aria-hidden="true" style="position: absolute; inset: 36px; border: 1px solid rgba(245,235,232,0.16); border-radius: 50%; animation: bx-spin 28s linear infinite reverse;"></div>
+<img src="/bx-logo.png" alt="Bloodlust Philippines logo" style="width: 300px; height: 300px; object-fit: contain; animation: bx-float 6s ease-in-out infinite;">
+</div>
+<div style="width: 100%; display: flex; justify-content: space-between; border-top: 1px solid rgba(245,235,232,0.24); padding-top: 16px;">
+<div><div style="font-size: 12px; letter-spacing: 0.2em; color: #b6acad;">STATUS</div><div style="display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 700; color: #c9a227;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #c9a227; animation: bx-pulse 1.6s infinite;"></span>OPEN RECRUITMENT</div></div>
+<div style="text-align: right;"><div style="font-size: 12px; letter-spacing: 0.2em; color: #b6acad;">TITLES</div><div style="font-size: 18px; font-weight: 700;">CODM · HOK · PB</div></div>
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; left: 80px; bottom: 28px; display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.3em; color: #b6acad;"><span style="width: 1px; height: 36px; background: #c9a227; transform-origin: top; animation: bx-draw 1.6s ease-in-out infinite alternate;"></span>SCROLL</div>
+</section>
+<div style="width: 1440px; height: 64px; background: #100e0e; border-bottom: 1px solid rgba(245,235,232,0.16); display: flex; align-items: center; overflow: hidden;"><div style="display: flex; gap: 48px; white-space: nowrap; font-size: 15px; letter-spacing: 0.24em; font-weight: 600; color: #b6acad; animation: bx-marquee 30s linear infinite;"><span>CALL OF DUTY: MOBILE</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span><span>CALL OF DUTY: MOBILE</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span><span>CALL OF DUTY: MOBILE</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span><span>CALL OF DUTY: MOBILE</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span></div></div>
+<div style="width: 1440px; height: 960px; box-sizing: border-box; padding: 64px 80px; display: flex; flex-direction: column; gap: 28px; background: #080707; overflow: hidden;">
+
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="font-size: 13px; letter-spacing: 0.3em; color: #c9a227; font-weight: 600;">001 / THE FEED</div>
+<h2 style="margin: 0; font-size: 88px; line-height: 0.9; font-weight: 700; letter-spacing: 0.01em;">THE FEED.</h2>
+<p style="margin: 8px 0 0; font-size: 18px; color: #b6acad; max-width: 560px;">The latest word from Bloodlust Philippines, alongside what is coming up next.</p>
+</div>
+<div style="display: flex; gap: 8px; align-items: center;">
+<button type="button" style="height: 44px; padding: 0 20px; border: 1px solid #c9a227; background: #c9a227; color: #120c0c; font-family: inherit; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; cursor: pointer;">ALL</button>
+<button type="button" style="height: 44px; padding: 0 20px; border: 1px solid rgba(245,235,232,0.24); background: transparent; color: #f5f5f5; font-family: inherit; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; cursor: pointer;">EVENTS</button>
+<button type="button" style="height: 44px; padding: 0 20px; border: 1px solid rgba(245,235,232,0.24); background: transparent; color: #f5f5f5; font-family: inherit; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; cursor: pointer;">UPDATES</button>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; height: 540px;">
+
+<div style="grid-column: span 7; padding: 2px; background: linear-gradient(90deg, #7a1420, #c9a227, #7a1420, #3e0c13, #7a1420); background-size: 200% 100%; animation: bx-border-sweep 6s linear infinite;">
+<article style="position: relative; height: 100%; box-sizing: border-box; padding: 40px; background: #100e0e; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+<div aria-hidden="true" style="position: absolute; right: -40px; bottom: -60px; font-size: 300px; font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(201,162,39,0.14); white-space: nowrap; animation: bx-drift 14s ease-in-out infinite alternate;">CODM</div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start;">
+<div style="display: flex; gap: 10px; align-items: center;">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(201,162,39,0.14); color: #c9a227; font-size: 12px; font-weight: 700; letter-spacing: 0.12em;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>EVENT</span>
+<span style="font-size: 12px; letter-spacing: 0.2em; color: #b6acad; font-weight: 600;">UP NEXT</span>
+</div>
+<div style="text-align: right;">
+<div style="font-size: 72px; font-weight: 700; line-height: 0.85; color: #c9a227;">27</div>
+<div style="font-size: 14px; letter-spacing: 0.24em; color: #f5f5f5; font-weight: 600;">SEP 2026 · SUN</div>
+</div>
+</div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 16px; animation: bx-rise 700ms ease-out both;">
+<h3 style="margin: 0; font-size: 104px; line-height: 0.88; font-weight: 700;">CODM<br>TAYO</h3>
+<div style="display: flex; align-items: center; gap: 8px; color: #b6acad; font-size: 18px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Cubao, Metro Manila</div>
+</div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;">
+<div style="display: flex; gap: 8px;">
+<div style="width: 88px; padding: 12px 0; text-align: center; border: 1px solid rgba(245,235,232,0.16); background: #171313;"><div style="font-size: 36px; font-weight: 700; line-height: 1;">04</div><div style="font-size: 11px; letter-spacing: 0.2em; color: #b6acad; margin-top: 4px;">DAYS</div></div>
+<div style="width: 88px; padding: 12px 0; text-align: center; border: 1px solid rgba(245,235,232,0.16); background: #171313;"><div style="font-size: 36px; font-weight: 700; line-height: 1;">12</div><div style="font-size: 11px; letter-spacing: 0.2em; color: #b6acad; margin-top: 4px;">HRS</div></div>
+<div style="width: 88px; padding: 12px 0; text-align: center; border: 1px solid rgba(245,235,232,0.16); background: #171313;"><div style="font-size: 36px; font-weight: 700; line-height: 1;">36</div><div style="font-size: 11px; letter-spacing: 0.2em; color: #b6acad; margin-top: 4px;">MIN</div></div>
+</div>
+<div style="display: flex; gap: 8px;">
+<a href="#" style="display: inline-flex; align-items: center; height: 48px; padding: 0 22px; background: #7a1420; color: #fff8f0; text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; border: 1px solid rgba(201,162,39,0.72);">ADD TO CALENDAR</a>
+<a href="#" style="display: inline-flex; align-items: center; height: 48px; padding: 0 22px; background: transparent; color: #f5f5f5; text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 0.1em; border: 1px solid rgba(245,235,232,0.24);">DIRECTIONS</a>
+</div>
+</div>
+</article>
+</div>
+
+<div style="grid-column: span 5; display: flex; flex-direction: column; gap: 16px;">
+<article style="flex-grow: 1; box-sizing: border-box; padding: 32px; background: #171313; border: 1px solid rgba(245,235,232,0.16); display: flex; flex-direction: column; justify-content: space-between; animation: bx-rise 700ms 150ms ease-out both;">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(122,20,32,0.35); color: #d08a98; font-size: 12px; font-weight: 700; letter-spacing: 0.12em;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>UPDATE</span>
+<span style="font-size: 13px; letter-spacing: 0.12em; color: #b6acad; font-weight: 600;">SEP 21, 2026</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<h3 style="margin: 0; font-size: 34px; line-height: 1.05; font-weight: 700;">RECRUITMENT IS NOW OPEN</h3>
+<p style="margin: 0; font-size: 17px; color: #b6acad; line-height: 1.5;">Applications for CODM and HOK are open. Tap Join Now to apply.</p>
+</div>
+<a href="#" style="font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-decoration: none;">READ UPDATE →</a>
+</article>
+<a href="#" style="height: 200px; box-sizing: border-box; padding: 32px; background: #7a1420; color: #fff8f0; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; animation: bx-rise 700ms 300ms ease-out both;">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px; letter-spacing: 0.24em; font-weight: 700;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #c9a227; animation: bx-pulse 1.6s ease-in-out infinite;"></span>RECRUITMENT LIVE</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end;">
+<div style="font-size: 40px; line-height: 0.95; font-weight: 700;">CODM · HOK<br>JOIN THE ROSTER</div>
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</div>
+</a>
+</div>
+</div>
+
+<div style="height: 56px; border-top: 1px solid rgba(245,235,232,0.16); border-bottom: 1px solid rgba(245,235,232,0.16); overflow: hidden; display: flex; align-items: center;">
+<div style="display: flex; gap: 48px; white-space: nowrap; font-size: 15px; letter-spacing: 0.24em; font-weight: 600; color: #b6acad; animation: bx-marquee 28s linear infinite;">
+<span>NEXT EVENT · CODM TAYO · SEP 27 · CUBAO</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN · CODM · HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>NEXT EVENT · CODM TAYO · SEP 27 · CUBAO</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN · CODM · HONOR OF KINGS</span><span style="color: #c9a227;">◆</span>
+<span>NEXT EVENT · CODM TAYO · SEP 27 · CUBAO</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN · CODM · HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>NEXT EVENT · CODM TAYO · SEP 27 · CUBAO</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN · CODM · HONOR OF KINGS</span><span style="color: #c9a227;">◆</span>
+</div>
+</div>
+
+</div>
+<section style="width: 1440px; height: 780px; box-sizing: border-box; padding: 72px 80px; background: #080707; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; justify-content: space-between; align-items: flex-end;">
+<div style="display: flex; flex-direction: column; gap: 8px;"><div style="font-size: 13px; letter-spacing: 0.3em; color: #c9a227; font-weight: 600;">002 / FEATURED GAMES</div><h2 style="margin: 0; font-size: 88px; line-height: 0.9; font-weight: 700;">WHERE WE<br><span style="color: transparent; -webkit-text-stroke: 2px #f5f5f5;">COMPETE.</span></h2></div>
+<p style="margin: 0; max-width: 380px; font-size: 17px; color: #b6acad; line-height: 1.5;">Hover a title to expand it. The open panel shows the logo, genre and a link to that division.</p>
+</div>
+<div style="flex-grow: 1; display: flex; gap: 16px;">
+<a href="#" style="position: relative; flex-grow: 3; flex-basis: 0; overflow: hidden; background: #171313; border: 1px solid #c9a227; color: #f5f5f5; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; padding: 32px;">
+<div aria-hidden="true" style="position: absolute; right: -24px; bottom: -40px; font-size: 260px; font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(201,162,39,0.22);">CODM</div>
+<div style="position: relative; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.2em; font-weight: 700;"><span style="color: #c9a227;">01</span><span style="color: #b6acad;">FPS · BATTLE ROYALE</span></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 120px; height: 120px; display: grid; place-items: center; background: #211a1b; border: 1px solid rgba(245,235,232,0.16);"><span style="font-size: 36px; font-weight: 700; color: #c9a227; letter-spacing: 0.04em;">CODM</span></div>
+<div style="font-size: 48px; line-height: 0.95; font-weight: 700; ">CALL OF DUTY: MOBILE</div>
+<p style="margin: 0; font-size: 17px; color: #b6acad; max-width: 420px;">[SHORT DESCRIPTION OF OUR CODM DIVISION]</p><span style="font-weight: 700; letter-spacing: 0.14em; font-size: 14px; color: #c9a227;">VIEW DIVISION →</span>
+</div>
+</a>
+<a href="#" style="position: relative; flex-grow: 1; flex-basis: 0; overflow: hidden; background: #100e0e; border: 1px solid rgba(245,235,232,0.16); color: #f5f5f5; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; padding: 32px;">
+<div aria-hidden="true" style="position: absolute; right: -24px; bottom: -40px; font-size: 260px; font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(201,162,39,0.1);">HOK</div>
+<div style="position: relative; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.2em; font-weight: 700;"><span style="color: #c9a227;">02</span><span style="color: #b6acad;">MOBA</span></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 120px; height: 120px; display: grid; place-items: center; background: #211a1b; border: 1px solid rgba(245,235,232,0.16);"><span style="font-size: 36px; font-weight: 700; color: #c9a227; letter-spacing: 0.04em;">HOK</span></div>
+<div style="font-size: 28px; line-height: 0.95; font-weight: 700; writing-mode: vertical-rl; transform: rotate(180deg); position: absolute; left: 0; bottom: 150px;">HONOR OF KINGS</div>
+
+</div>
+</a>
+<a href="#" style="position: relative; flex-grow: 1; flex-basis: 0; overflow: hidden; background: #100e0e; border: 1px solid rgba(245,235,232,0.16); color: #f5f5f5; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; padding: 32px;">
+<div aria-hidden="true" style="position: absolute; right: -24px; bottom: -40px; font-size: 260px; font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(201,162,39,0.1);">PB</div>
+<div style="position: relative; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.2em; font-weight: 700;"><span style="color: #c9a227;">03</span><span style="color: #b6acad;">FPS</span></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 16px;">
+<div style="width: 120px; height: 120px; display: grid; place-items: center; background: #211a1b; border: 1px solid rgba(245,235,232,0.16);"><span style="font-size: 36px; font-weight: 700; color: #c9a227; letter-spacing: 0.04em;">PB</span></div>
+<div style="font-size: 28px; line-height: 0.95; font-weight: 700; writing-mode: vertical-rl; transform: rotate(180deg); position: absolute; left: 0; bottom: 150px;">POINT BLANK</div>
+
+</div>
+</a></div>
+</section>
+<section style="position: relative; width: 1440px; height: 620px; background: #7a1420; overflow: hidden; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; box-sizing: border-box; padding: 80px;">
+<div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; right: -80px; width: 720px; background: repeating-linear-gradient(135deg, rgba(8,7,7,0.25) 0 2px, transparent 2px 28px);"></div>
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 64px; background: #080707; display: flex; align-items: center; overflow: hidden;"><div style="display: flex; gap: 48px; white-space: nowrap; font-size: 15px; letter-spacing: 0.24em; font-weight: 600; color: #f5f5f5; animation: bx-marquee 24s linear infinite;"><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span><span>CODM</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>APPLY TODAY</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span><span>CODM</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>APPLY TODAY</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span><span>CODM</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>APPLY TODAY</span><span style="color: #c9a227;">◆</span><span>RECRUITMENT OPEN</span><span style="color: #c9a227;">◆</span><span>CODM</span><span style="color: #c9a227;">◆</span><span>HONOR OF KINGS</span><span style="color: #c9a227;">◆</span><span>POINT BLANK</span><span style="color: #c9a227;">◆</span><span>APPLY TODAY</span><span style="color: #c9a227;">◆</span></div></div>
+<div style="position: relative; grid-column: span 8; display: flex; flex-direction: column; gap: 24px;">
+<div style="font-size: 13px; letter-spacing: 0.3em; color: #fff8f0; font-weight: 600;">READY TO RISE?</div>
+<h2 style="margin: 0; font-size: 96px; line-height: 0.9; font-weight: 700; color: #fff8f0;">BRING YOUR GAME<br>TO THE FRONT LINE.</h2>
+<p style="margin: 0; max-width: 560px; font-size: 19px; color: #f0dce0; line-height: 1.5;">Share your profile, upload a headshot, and confirm your application. It takes about [MINUTES] minutes.</p>
+</div>
+<div style="position: relative; grid-column: span 4; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
+<a href="#" style="height: 88px; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; background: #080707; color: #f5f5f5; text-decoration: none; font-size: 22px; font-weight: 700; letter-spacing: 0.1em; border: 1px solid #c9a227;">START APPLICATION <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div style="display: flex; gap: 8px; font-size: 13px; letter-spacing: 0.16em; color: #fff8f0; font-weight: 600;"><span>01 NOTICE</span><span>·</span><span>02 FORM</span><span>·</span><span>03 REVIEW</span></div>
+</div>
+</section>
+<footer style="position: relative; width: 1440px; height: 560px; box-sizing: border-box; padding: 72px 80px 32px; background: #080707; border-top: 1px solid rgba(245,235,232,0.16); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+<div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px;">
+<div style="grid-column: span 5; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; align-items: center; gap: 14px;"><img src="/bx-logo.png" alt="Bloodlust Philippines logo" style="width: 56px; height: 56px; object-fit: contain;"><span style="font-size: 22px; font-weight: 700; letter-spacing: 0.06em;">BLOODLUST PHILIPPINES</span></div>
+<p style="margin: 0; font-size: 17px; color: #b6acad; max-width: 420px; line-height: 1.5;">Fuel the fight, Respect the grind.</p>
+<a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 22px; background: #7a1420; color: #fff8f0; text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; border: 1px solid rgba(201,162,39,0.72);">JOIN NOW <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<nav aria-label="Footer" style="grid-column: span 3; display: flex; flex-direction: column; gap: 12px;"><div style="font-size: 13px; letter-spacing: 0.3em; color: #c9a227; font-weight: 600;">EXPLORE</div><a href="#" style="color: #f5f5f5; text-decoration: none; font-size: 18px;">Home</a><a href="#" style="color: #f5f5f5; text-decoration: none; font-size: 18px;">Partners</a><a href="#" style="color: #f5f5f5; text-decoration: none; font-size: 18px;">About Us</a><a href="#" style="color: #f5f5f5; text-decoration: none; font-size: 18px;">Join Now</a></nav>
+<div style="grid-column: span 4; display: flex; flex-direction: column; gap: 12px;"><div style="font-size: 13px; letter-spacing: 0.3em; color: #c9a227; font-weight: 600;">FOLLOW</div><a href="#" style="color: #f5f5f5; text-decoration: none; font-size: 18px;">[FACEBOOK PAGE]</a><a href="#" style="color: #f5f5f5; text-decoration: none; font-size: 18px;">[TIKTOK]</a><a href="#" style="color: #f5f5f5; text-decoration: none; font-size: 18px;">[DISCORD]</a></div>
+</div>
+<div aria-hidden="true" style="font-size: 236px; font-weight: 700; line-height: 0.8; letter-spacing: -0.02em; color: transparent; -webkit-text-stroke: 1px rgba(201,162,39,0.35); white-space: nowrap; animation: bx-mask 1.6s ease-out both;">BLOODLUST</div>
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #b6acad; border-top: 1px solid rgba(245,235,232,0.16); padding-top: 16px;"><span>© 2026 Bloodlust Philippines Corporation</span><span>Fuel the fight, Respect the grind</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3964}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

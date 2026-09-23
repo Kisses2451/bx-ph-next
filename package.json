@@ -1,0 +1,35 @@
+{
+  "name": "bloodlust-philippines",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "db:types": "supabase gen types typescript --project-id flueiixffumvzxtguavr --schema public > src/types/database.ts",
+    "db:push": "supabase db push",
+    "db:diff": "supabase db diff --linked"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/next-js": "^2.4.2",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@supabase/supabase-js": "^2.116.0",
+    "next": "^16.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "oxlint": "^1.81.0",
+    "supabase": "^2.117.0",
+    "typescript": "~6.0.2"
+  }
+}
